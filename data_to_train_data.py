@@ -44,5 +44,9 @@ class data_to_train_data:
         for icd in df.loc[0].history_me:
             train_data.loc[0]['history_me_'+str(icd)] = 1
         train_data = train_data.fillna(0)
+        open_file = open('./need_train_list.pickle', "rb")
+        need_train_list = pickle.load(open_file)
+        open_file.close()
+        train_data = train_data[need_train_list]
         train_data = train_data.drop('ID',axis = 1)
         return train_data
