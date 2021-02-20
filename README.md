@@ -12,38 +12,38 @@ test.ipynb 有詳細用法
 
 ### Patient
 
-* ID (str) 如果沒有，請幫忙填入隨意值，且須與record和inpatient相同
-* Gender (str)
-* Birth (pandas._libs.tslibs.timestamps.Timestamp)
+* ID (str) ID，如果沒有，請幫忙填入隨意值，且須與record和inpatient相同
+* Gender (str) 性別
+* Birth (pandas._libs.tslibs.timestamps.Timestamp)  出生日期
 
 ### Record
 
-* PatientID  (str)      
-* SeqNo           (int)        目前沒用到，沒有請填空值。
-* InDate          (pandas._libs.tslibs.timestamps.Timestamp)
-* Area            (str)      
-* Type (str)      
-* ApplyDot        (int)         
-* TotalDot       (int)        
-* ICD9CM         (list[int])   
+* PatientID  (str)      ID，如果沒有，請幫忙填入隨意值，且須與patient和inpatient相同
+* SeqNo           (int)     不知道，目前沒用到，沒有請填空值。
+* InDate          (pandas._libs.tslibs.timestamps.Timestamp) 看診日期
+* Area            (str)      看診地區
+* Type (str)      看診類別  0門診 1住院 2 急診
+* ApplyDot        (int)         申請資療點數
+* TotalDot       (int)        實際醫療點數
+* ICD9CM         (list[int])   疾病
 
 ### Inpatient
 
-* PatientID            (str)      
-* SeqNo               (int) 目前沒用到，沒有請填空值。
-*   HospID               (str)      目前沒用到，沒有請填空值。
-*   HospSpecItem         (str)      目前沒用到，沒有請填空值。
-*   AcuteBed             (int)        目前沒用到，沒有請填空值。
-*   ChronicBed           (int)        目前沒用到，沒有請填空值。
-*   TotalBed             (int)        目前沒用到，沒有請填空值。
-*   ICD9CM              (list[int])
-*   TranTime            (int) 目前沒用到，沒有請填空值。
-*   TranCode             (str)       目前沒用到，沒有請填空值。
-*  PartDot             (int)        目前沒用到，沒有請填空值。
-*  ApplyDot            (int)         目前沒用到，沒有請填空值。
-*  DayDot              (float)       目前沒用到，沒有請填空值。
-*  TotalDot            (int)        
-*  InDate             (pandas._libs.tslibs.timestamps.Timestamp)
-*  OutDate            (pandas._libs.tslibs.timestamps.Timestamp)
-*  InAge               (int) 目前沒用到，沒有請填空值。
-*  Drug               (list[int])
+* PatientID            (str)      ID，如果沒有，請幫忙填入隨意值，且須與patient和record相同
+* SeqNo               (int) 不知道，目前沒用到，沒有請填空值。
+*   HospID               (str)      不知道，目前沒用到，沒有請填空值。
+*   HospSpecItem         (str)      不知道，目前沒用到，沒有請填空值。
+*   AcuteBed             (int)        不知道，目前沒用到，沒有請填空值。
+*   ChronicBed           (int)        不知道，目前沒用到，沒有請填空值。
+*   TotalBed             (int)        不知道，目前沒用到，沒有請填空值。
+*   ICD9CM              (list[int]) 疾病
+*   TranTime            (int) 不知道，目前沒用到，沒有請填空值。
+*   TranCode             (str)       不知道，目前沒用到，沒有請填空值。
+*  PartDot             (int)        不知道，目前沒用到，沒有請填空值。
+*  ApplyDot            (int)         不知道，目前沒用到，沒有請填空值。
+*  DayDot              (float)       不知道，目前沒用到，沒有請填空值。
+*  TotalDot            (int)        實際醫療點數
+*  InDate             (pandas._libs.tslibs.timestamps.Timestamp)  住(進)院日期
+*  OutDate            (pandas._libs.tslibs.timestamps.Timestamp) 出院日期
+*  InAge               (int) 不知道，目前沒用到，沒有請填空值。
+*  Drug               (list[int]) 用藥
