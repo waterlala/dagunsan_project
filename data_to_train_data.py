@@ -10,8 +10,7 @@ class data_to_train_data:
     def fit(self, p, r, i):
         r = r[r['Type']!=0]
         get_data_library = gl(p, r, i)
-        df = get_data_library.get_confirm_area()
-        df = pd.merge(df,get_data_library.get_confirm_month(),on = 'ID')
+        df = get_data_library.get_confirm_month()
         df = pd.merge(df,get_data_library.get_confirm_age(),on = 'ID')
         df = pd.merge(df,get_data_library.get_confirm_icd(),on = 'ID')
         df = pd.merge(df,get_data_library.get_confirm_type(),on = 'ID')
@@ -34,7 +33,6 @@ class data_to_train_data:
         train_data.loc[0].history_in_times = df.loc[0].history_in_times
         train_data.loc[0].history_dot = df.loc[0].history_dot
         train_data.loc[0]['confirm_month_'+str(df.loc[0].confirm_month)] = 1
-        train_data.loc[0]['area_'+str(df.loc[0].area)] = 1
         train_data.loc[0]['gender_'+str(df.loc[0].gender)] = 1
         for icd in df.loc[0].confirm_icd:
             train_data.loc[0]['confirm_icd_'+str(icd)] = 1
