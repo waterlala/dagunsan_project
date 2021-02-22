@@ -11,5 +11,5 @@ class simple_train_data:
         r = r.rename(columns = {'PatientID':'ID'})
         r['Type'] = r['Type'].astype('int64')
         i = input_inpatients.rename(columns = {'PatientID':'ID'})
-        i = i[['ID','ICD9CM','InDate','OutDate','Drug']]
+        i = i[['ID','ICD9CM','InDate','OutDate']]
         return p, r, i
