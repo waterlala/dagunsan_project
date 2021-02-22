@@ -21,31 +21,6 @@ test.ipynb 有詳細用法
 * PatientID  (str)      ID，如果沒有，請幫忙填入隨意值，且須與patient和inpatient相同
 * SeqNo           (int)     不知道，目前沒用到，沒有請填空值。
 * InDate          (pandas._libs.tslibs.timestamps.Timestamp) 看診日期
-* Area            (str)      看診地區
-
-TaipeiCity        
-KaohsiungCity      
-TaichungCity       
-TaoyuanCity        
-TainanCity         
-NewTaipeiCity      
-ChanghuaCounty     
-PingtungCounty     
-ChiayiCity         
-KeelungCity        
-ChiayiCounty       
-YilanCounty        
-HualienCounty      
-YunlinCounty       
-HsinchuCity        
-MiaoliCounty       
-HsinchuCounty       
-TaitungCounty       
-NantouCounty        
-PenghuCounty        
-KinmenCounty    
-
-
 * Type (str)      看診類別  0門診 1住院 2 急診，健保資料只有分門診跟住院，沒差，照填。
 * ApplyDot        (int)         申請資療點數，健保資料沒有請填0，或是跟實際醫療點數一樣。
 * TotalDot       (int)        實際醫療點數
